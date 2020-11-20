@@ -1,9 +1,16 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "type": "Microsoft.DeploymentManager/artifactSources",
+  "apiVersion": "2018-09-01-preview",
+  "name": "<artifact-source-name>",
+  "location": "<artifact-source-location>",
+  "properties": {
+    "sourceType": "AzureStorage",
+    "artifactRoot": "<root-folder-for-templates>",
+    "authentication": {
+      "type": "SAS",
+      "properties": {
+        "sasUri": "<SAS-URI-for-storage-container>"
+      }
+    }
+  }
 }
